@@ -1,15 +1,16 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  distDir: 'build',
   images: {
     remotePatterns: [
       {
         protocol: 'https',
         // This becomes "[your-project-id].supabase.co"
         hostname: new URL(process.env.NEXT_PUBLIC_SUPABASE_URL).hostname,
-        pathname: '**',
-      },
-    ],
-  },
-};
+        pathname: '**'
+      }
+    ]
+  }
+}
 
-export default nextConfig;
+export default nextConfig
